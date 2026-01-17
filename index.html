@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunch Builder</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <button onclick="location.href = 'index.html'">Собрать ланч</button>
+      <button onclick="location.href = 'checkout.html'">Оформить заказ</button>
+      <button onclick="location.href = 'orders.html'">Заказы</button>
+    </nav>
+
+    <main class="layout">
+   <div id="nav" class="filters-box">
+  <h3 style="margin: 0 0 10px">Категории</h3>
+
+  <label style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+    <input type="checkbox" class="cat-check" value="soup" checked />
+    Супы
+  </label>
+
+  <label style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+    <input type="checkbox" class="cat-check" value="main-course" checked />
+    Главные блюда
+  </label>
+
+  <label style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+    <input type="checkbox" class="cat-check" value="salad" checked />
+    Салаты
+  </label>
+
+  <label style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+    <input type="checkbox" class="cat-check" value="dessert" checked />
+    Десерты
+  </label>
+
+  <label style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+    <input type="checkbox" class="cat-check" value="drink" checked />
+    Напитки
+  </label>
+
+  <h3 style="margin: 10px 0 10px">Стоимость</h3>
+
+  <div style="display:flex;gap:10px;">
+    <input id="price-from" type="number" placeholder="От" style="width:50%;" />
+    <input id="price-to" type="number" placeholder="До" style="width:50%;" />
+  </div>
+
+  <button id="apply-filters" type="button" style="margin-top:10px;">
+    Применить
+  </button>
+</div>
+
+      <!-- Меню (центр) -->
+      <section class="content">
+        <h1 class="page-title">Собери своё комбо</h1>
+        <div id="menu"></div>
+      </section>
+
+    
+        <div class="total-box">Итог: <span id="price">0</span> ₽
+        
+         <div id="checkout-panel" class="checkout-panel" style="display: none">
+          <a href="checkout.html" class="go-checkout">Перейти к оформлению</a>
+        </div>
+
+       
+      </aside>
+    </main>
+
+    <!-- notify -->
+    <div id="notify" class="notify hidden">
+      <div class="notify-box">
+        <p id="notify-text"></p>
+        <button id="notify-ok">ОК</button>
+      </div>
+    </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Food Construct</div>
+      <div class="footer-text">Доставка бизнес-ланчей • Москва</div>
+    </div>
+
+    <div class="footer-right">
+      <a class="footer-link" href="tel:+79990000000">+7 (999) 000-00-00</a>
+      <span class="footer-sep">•</span>
+      <a class="footer-link" href="mailto:food@construct.ru">food@construct.ru</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Food Construct
+  </div>
+</footer>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
